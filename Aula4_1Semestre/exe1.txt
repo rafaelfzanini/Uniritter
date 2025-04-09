@@ -1,0 +1,18 @@
+//EX-01-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int r1;
+        //
+        System.out.print("Digite um valor: ");
+        r1 = ler.nextInt();
+
+        if (r1 >= 0) {
+            System.out.println("Número positivo.");
+        } else {
+            System.out.println("Número negativo.");
+        }
+    ler.close();
+    }
+}
