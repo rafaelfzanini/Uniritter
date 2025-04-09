@@ -1,0 +1,22 @@
+//EX-08-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        int r1, r2= 0;
+        //cd
+        System.out.println("Digite o ano do seu nascimento: ");
+        r1 = ler.nextInt();
+        r2 = 2025 - r1;
+        if (r2>=18){
+            System.out.println("Pode votar.");
+        }
+        else{
+            System.out.println("Não pode votar devido a idade inferior a permitida.");
+            System.out.println("Idade atual: " + r2);
+            System.out.println("Idade mínima: 18");
+        }
+    ler.close();
+    }
+}

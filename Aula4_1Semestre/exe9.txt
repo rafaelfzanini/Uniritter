@@ -1,0 +1,33 @@
+//EX-09-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        double r1, r2, r3 = 0;
+        //cd
+        System.out.println("Digite o lado 1: ");
+        r1 = ler.nextDouble();
+        System.out.println("Digite o lado 2: ");
+        r2 = ler.nextDouble();
+        System.out.println("Digite o lado 3: ");
+        r3 = ler.nextDouble();
+        //cd2
+        if (r1 + r2 >= r3 && r2 + r3 >= r1 && r1 + r3 >= r2) {
+            System.out.println("Esse triângulo é possível.");
+            if (r1 == r2 && r1 != r3 || r1 == r3 && r2 != r1 || r2 == r3 && r1 != r3) {
+                System.out.println("O triângulo é isóceles");
+            }
+            else if (r1 != r2 && r2 != r3) {
+                System.out.println("O triângulo é escaleno");
+            }
+            else {
+                System.out.println("O triângulo é equilatero.");
+            }
+        }
+        else {
+            System.out.println("Esse triângulo não é possivel.");
+        }
+    ler.close();
+    }
+}

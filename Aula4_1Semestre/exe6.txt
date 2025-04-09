@@ -1,0 +1,21 @@
+//EX-06-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        float n1, n2 = 0;
+        //
+        System.out.println("Digite o primeiro valor: ");
+        n1 = ler.nextFloat();
+        System.out.println("Digite o segundo valor: ");
+        n2 = ler.nextFloat();
+        if (n1>=n2){
+            System.out.println("O maior valor é: " + n1);
+        }
+        else{
+            System.out.println("O maior valor é: " + n2);
+        }
+    ler.close();
+    }
+}

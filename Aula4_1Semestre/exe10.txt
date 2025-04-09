@@ -1,0 +1,21 @@
+//EX-10-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        double r1, s1 = 0;
+        //cd
+        System.out.println("Digite o número de maçãs: ");
+        r1 = ler.nextDouble();
+        if(r1<=12){
+            s1 = r1*0.3;
+            System.out.println("O valor total será: " + s1);
+        }
+        else{
+            s1 = r1*0.25;
+            System.out.println("O valor total será: "+ s1);
+        }
+    ler.close();    
+    }
+}

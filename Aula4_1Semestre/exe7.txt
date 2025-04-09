@@ -1,0 +1,19 @@
+//EX-07-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        int r1= 0;
+        //cd
+        System.out.println("Digite um número (apenas números de 1-9 serão permitidos): ");
+        r1 = ler.nextInt();
+        if (r1>=1 && r1<=9){
+            System.out.println("PERMITIDO");
+        }
+        else{
+            System.out.println("NÃO PERMITIDO");
+        }
+    ler.close();
+    }
+}
