@@ -1,2 +1,2 @@
 # Uniritter
- Material realizado remotamente/presencialmente do curso de Ciências da Computação da Uniritter.
+ Material do curso de Ciências da Computação da Uniritter.
