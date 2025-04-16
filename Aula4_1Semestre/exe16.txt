@@ -1,0 +1,54 @@
+//EX-16-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        int r1, r2, r3, r4;
+        //cd
+        System.out.println("Digite o primeiro número: ");
+        r1 = ler.nextInt();
+        System.out.println("Digite o segundo número: ");
+        r2 = ler.nextInt();
+        //cd2
+        if(r1==r2){
+            System.out.println("São iguais.");
+        }
+        else if (r1%2==0){
+            System.out.println("Digite um terceiro valor: ");
+            r3 = ler.nextInt();
+            if(r1>r2 && r1>r3){
+                System.out.println("O maior valor é: " + r1);
+            }
+            else if(r2>r3 && r2>r1){
+                System.out.println("O maior valor é: " + r2);
+            }
+            else{
+                System.out.println("O maior valor é: " + r3);
+            }
+        }
+        else {
+            System.out.println("Digite um terceiro valor: ");
+            r3 = ler.nextInt();
+            System.out.println("Digite um quarto valor: ");
+            r4 = ler.nextInt();
+            if (r1 > r2 && r3 > r4) {
+                System.out.println("O maior valor dos dois primeiros é: " + r1);
+                System.out.println("O maior valor dos dois ultimos é: " + r3);
+            }
+            else if (r1 < r2 && r3 < r4) {
+                System.out.println("O maior valor dos dois primeiros é: " + r2);
+                System.out.println("O maior valor dos dois ultimos é: " + r4);
+            }
+            else if (r1 > r2 && r3 < r4) {
+                System.out.println("O maior valor dos dois primeiros é: " + r1);
+                System.out.println("O maior valor dos dois ultimos é: " + r4);
+            }
+            else {
+                System.out.println("O maior valor dos dois primeiros é: " + r2);
+                System.out.println("O maior valor dos dois ultimos é: " + r3);
+            }
+        }
+        ler.close();
+    }
+}

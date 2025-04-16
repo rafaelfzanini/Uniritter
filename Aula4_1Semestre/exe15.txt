@@ -1,0 +1,26 @@
+//EX-15-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        float r1, r2;
+        //cd
+        System.out.println("Digite o primeiro valor: ");
+        r1 = ler.nextFloat();
+        System.out.println("Digite o segundo valor: ");
+        r2 = ler.nextFloat();
+        if (r1 > r2) {
+            System.out.println("O maior é " + r1);
+            System.out.println("O menor é " + r2);
+        }
+        else if (r1 < r2) {
+            System.out.println("O maior é " + r2);
+            System.out.println("O menor é " + r1);
+        }
+        else {
+            System.out.println("Os valores são iguais.");
+        }
+        ler.close();
+    }
+}

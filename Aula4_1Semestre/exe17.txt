@@ -1,0 +1,29 @@
+//EX-17-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        int r1, r2, r3;
+        //cd
+        System.out.println("Digite o primeiro valor: ");
+        r1 = ler.nextInt();
+        System.out.println("Digite o segundo valor: ");
+        r2 = ler.nextInt();
+        System.out.println("Digite o terceiro valor: ");
+        r3 = ler.nextInt();
+        if(r1>r2 && r1>3){
+            System.out.println("O maior valor é: " + r1);
+        }
+        else if(r2>r1 && r2>r3){
+            System.out.println("O maior valor é: " + r2);
+        }
+        else if(r3>r1 && r3>r2){
+            System.out.println("O maior valor é: " + r3);
+        }
+        else{
+            System.out.println("O maior valor é: " + r1);
+        }
+        ler.close();
+    }
+}

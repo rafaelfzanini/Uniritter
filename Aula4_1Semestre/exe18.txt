@@ -1,0 +1,50 @@
+//EX-18-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        double pt, n1, cd, tot;
+        //cd
+        System.out.println("Digite o preço de tabela: ");
+        pt = ler.nextDouble();
+        System.out.println("Digite em quantas vezes o pagamento será realizado(de 1 a 15 meses): ");
+        n1 = ler.nextDouble();
+        // de 2 a 5
+        if(n1>=2 && n1<=5) {
+            System.out.println("---PREÇO DE TABELA: " + pt);
+            System.out.println("---NÚMERO DE VEZES: " + n1);
+            tot = pt;
+            cd = tot/n1;
+            System.out.println("---VALOR DE CADA PARCELA: " + cd);
+            System.out.println("---VALOR TOTAL: " + tot);
+        }
+        //de 6 a 10
+        else if(n1>=6 && n1<=10){
+            System.out.println("---PREÇO DE TABELA: " + pt);
+            System.out.println("---NÙMERO DE VEZES: " + n1);
+            tot = pt + (0.06*pt);
+            cd = tot/n1;
+            System.out.println("---VALOR DE CADA PERCELA: " + cd);
+            System.out.println("---VALOR TOTAL: " + tot);
+        }
+        //de 11 a 15
+        else if(n1>=11 && n1<=15){
+            System.out.println("---PREÇO DE TABELA: " + pt);
+            System.out.println("---NÚMERO DE VEZES: " + n1);
+            tot = pt + (0.13 * pt);
+            cd = tot / n1;
+            System.out.println("---VALOR DE CADA PARCELA: " + cd);
+            System.out.println("---VALOR TOTAL: " + tot);
+        }
+        else{
+            System.out.println("---PREÇO DE TABELA: " + pt);
+            System.out.println("---NÚMERO DE VEZES: " + n1);
+            tot = pt - (0.025 * pt);
+            cd = tot / n1;
+            System.out.println("---VALOR DE CADA PARCELA: " + cd);
+            System.out.println("---VALOR TOTAL: " + tot);
+        }
+        ler.close();
+    }
+}

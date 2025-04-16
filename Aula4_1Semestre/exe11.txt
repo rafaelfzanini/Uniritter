@@ -1,0 +1,27 @@
+//EX-11-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        double r1, r2 = 0;
+        //cd
+        System.out.println("Digite o primeiro valor: ");
+        r1 = ler.nextDouble();
+        System.out.println("Digite o segundo valor");
+        r2 = ler.nextDouble();
+        //cd2
+        if(r1!=r2){
+            if(r1>r2){
+                System.out.println(r2 + "    " + r1);
+            }
+            else{
+                System.out.println(r1 + "    " + r2);
+            }
+        }
+        else{
+            System.out.println("Valores iguais não são permitidos.");
+        }
+        ler.close();
+    }
+}

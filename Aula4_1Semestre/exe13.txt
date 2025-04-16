@@ -1,0 +1,27 @@
+//EX-13-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        int r1;
+        double r2, h1;
+        //cd
+        System.out.println("Digite [1] para homem e [2] para mulher:");
+        r1 = ler.nextInt();
+        System.out.println("Digite sua altura (em metros): ");
+        h1 = ler.nextDouble();
+        if (r1 == 1){
+            r2 = (72.7 * h1) - 58;
+            System.out.println("O peso ideal para sua altura é: " + r2);
+        }
+        else if (r1 == 2){
+            r2 = (62.1 * h1) - 44.7;
+            System.out.println("O peso ideal para sua altura é: " + r2);
+        }
+        else {
+            System.out.println("Digite 1 ou 2.");
+        }
+        ler.close();
+    }
+}

@@ -1,0 +1,43 @@
+//EX-19-AU4
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //variaveis
+        double r1, r2;
+        //cd
+        System.out.println("Digite sua idade: ");
+        r1 = ler.nextDouble();
+        System.out.println("Digite seu peso: ");
+        r2 = ler.nextDouble();
+        //INFANTIL
+        if(r1<=12) {
+            System.out.println("Categoria: INFANTIL");
+        }
+        //JUVENIL
+        else if(r1>=13 && r1<=16) {
+            if(r2<=40){
+                System.out.println("Categoria: JUVENIL LEVE");
+            }
+            else{
+                System.out.println("Categoria: JUVENIL PESADO");
+            }
+        }
+        //SENIOR
+        else if(r1>16 && r1<=24){
+            if(r2<=45){
+                System.out.println("SENIOR LEVE");
+            }
+            else if(r2>45 && r2<=60){
+                System.out.println("SENIOR MEDIO");
+            }
+            else{
+                System.out.println("SENIOR PESADO");
+            }
+        }
+        else{
+            System.out.println("VETERANO");
+        }
+        ler.close();
+    }
+}
