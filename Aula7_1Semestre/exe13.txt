@@ -1,0 +1,15 @@
+//EX-13-AU07
+public class Main {
+    public static void main(String[] args) {
+        //var
+        int c1 = 0;
+        //cd 1
+        for(int i = 51; i>0; i-- ){
+            if(i%2==0){
+                System.out.println(i);
+                c1 = c1 + i;
+            }
+        }
+        System.out.println("A soma entre todos os pares é: " + c1);
+    }
+}

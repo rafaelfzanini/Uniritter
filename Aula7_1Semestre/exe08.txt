@@ -1,0 +1,9 @@
+//EX-08-AU07
+public class Main {
+    public static void main(String[] args) {
+        //cd
+        for (int i = 100; i < 201; i += 10) {
+            System.out.println(i);
+        }
+    }
+}

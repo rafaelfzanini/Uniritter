@@ -1,0 +1,23 @@
+//EX-11-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //var
+        int r1;
+        //cd 1
+        do{
+            System.out.println("Digite um valor: ");
+            r1 = ler.nextInt();
+            if (r1%2==0 && r1!=0) {
+                System.out.println("PAR");
+
+            }
+            else if (r1%2==1){
+                System.out.println("IMPAR");
+            }
+        }
+        while (r1>0);
+        ler.close();
+    }
+}

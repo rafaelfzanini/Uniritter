@@ -1,0 +1,28 @@
+//EX-09-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //var
+        int maior=0, menor = 0, r1 = 0;
+        //cd 1
+        System.out.println("Digite um valor: ");
+        r1 = ler.nextInt();
+        menor = r1;
+        //cd 2
+        for(int i = 0; i<49; i++){
+            System.out.println("Digite um valor: ");
+            r1 = ler.nextInt();
+            if(r1>=maior){
+                maior = r1;
+
+            }
+            if(r1 <= menor) {
+                menor = r1;
+            }
+        }
+        System.out.println("O maior valor digitado foi: " + maior);
+        System.out.println("O menor valor digitado foi: " + menor);
+        ler.close();
+    }
+}
