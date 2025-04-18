@@ -1,0 +1,39 @@
+//EX-24-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int cod, cont = 0;
+        double pre, pre2, mediacom = 0, mediasem = 0, mediasemt, mediacomt;
+        //cd
+        do{
+            //código
+            System.out.println("Digite o código do produto: ");
+            cod = sc.nextInt();
+            //quebra do código caso seja menor que 0
+            if(cod<0){
+                System.out.println("Encerrando...");
+                break;
+            }
+            System.out.println("Digite o preço do produto: ");
+            //preço
+            pre = sc.nextDouble();
+            pre2 = (pre*0.2) + pre;
+            //médias
+            mediacom= (pre2 + mediacom);
+            mediasem= (pre + mediasem);
+            cont++;
+            //exibido
+            System.out.println("Código do produto: " + cod);
+            System.out.println("Preço anterior: " + pre);
+            System.out.println("Novo preço: " + pre2);
+        }while(cod>=0);
+        //médias 2
+        mediacomt = mediacom/cont;
+        mediasemt = mediasem/cont;
+        System.out.println("A média dos pordutos com preços sem o aumento: " + mediasemt);
+        System.out.println("A média dos produtos com preços com o aumento: " + mediacomt);
+        sc.close();
+    }
+}

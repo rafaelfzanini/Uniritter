@@ -1,0 +1,18 @@
+//EX-05-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        //cd
+        System.out.println("Digite um dia da semana: ");
+        String dia = sc.nextLine();
+        if (dia.equalsIgnoreCase("sábado") || dia.equalsIgnoreCase("sabado") || dia.equalsIgnoreCase("domingo")){
+            System.out.println("Fim de semana");
+        }
+        else {
+            System.out.println("Dia útil");
+        }
+        sc.close();
+    }
+}

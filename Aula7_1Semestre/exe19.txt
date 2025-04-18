@@ -1,0 +1,28 @@
+//EX-19-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int cod = 1;
+        float r1, r2,r3, media;
+        //cd
+        while(cod != 0){
+            System.out.println("Digite o código do aluno: ");
+            cod = sc.nextInt();
+            if(cod==0){
+                System.out.println("Encerrando programa...");
+                break;
+            }
+            System.out.println("Digite o valor da primeira nota: ");
+            r1=sc.nextFloat();
+            System.out.println("Digite o valor da segunda nota: ");
+            r2=sc.nextFloat();
+            System.out.println("Digite o valor da terceira nota: ");
+            r3=sc.nextFloat();
+            media = (r1 + r2 + r3)/3;
+            System.out.println("A média do aluno foi de: " + media);
+        }
+        sc.close();
+    }
+}

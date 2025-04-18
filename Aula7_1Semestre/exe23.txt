@@ -1,0 +1,41 @@
+//EX-23-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int r1, maior, menor, contador =0;
+        double media =0, mediat;
+        //var2
+        int turma, alun = 1;
+        //cd 1
+        System.out.println("Digite a quantidade de alunos: ");
+        turma = sc.nextInt();
+        //cd2
+        System.out.println("Digite uma nota: ");
+        r1 = sc.nextInt();
+        contador = contador + 1;
+        media = media + r1;
+        maior = r1;
+        menor = r1;
+
+        while(turma>alun){
+            System.out.println("Digite uma nota");
+            r1 = sc.nextInt();
+            contador = contador + 1;
+            media = media + r1;
+            alun++;
+            if(r1>maior){
+                maior = r1;
+            }
+            if(r1<menor){
+                menor = r1;
+            }
+        }
+        mediat = media/contador;
+        System.out.println("A maior nota da turma foi: " + maior);
+        System.out.println("A menor nota da turma foi: " + menor);
+        System.out.println("A média da turma foi: " + mediat);
+        sc.close();
+    }
+}

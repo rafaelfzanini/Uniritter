@@ -1,0 +1,22 @@
+//EX-20-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        double r1 = 0;
+        double smedia = 0, cont = 0, media = 0;
+        //cd
+        while(r1 >= 0){
+            System.out.println("Digite um valor positivo (valor negativo para sair): ");
+            r1 = sc.nextDouble();
+            if(r1>=0){
+                smedia = smedia + r1;
+                cont = cont + 1;
+            }
+        }
+        media = smedia/cont;
+        System.out.println("A média dos valores diigtados foi de: " + media);
+        sc.close();
+    }
+}
