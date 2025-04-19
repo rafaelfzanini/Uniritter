@@ -1,0 +1,40 @@
+//EX-29-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int codigo;
+        double valor, totalD = 0, totalC = 0;
+        //cd1
+        System.out.println("Digite o código da operação:");
+        System.out.println("(1) Débito");
+        System.out.println("(2) Crédito");
+        System.out.println("(0) Encerrar");
+        //cd2
+        do {
+            System.out.print("Código: ");
+            codigo = sc.nextInt();
+            if (codigo == 0) {
+                System.out.println("Encerrando...");
+                break;
+            }
+            if (codigo != 1 && codigo != 2) {
+                System.out.println("Código inválido. Tente novamente.");
+                continue;
+            }
+            System.out.print("Digite a quantia: ");
+            valor = sc.nextDouble();
+            switch (codigo) {
+                case 1 -> totalD += valor;
+                case 2 -> totalC += valor;
+            }
+        } while (codigo != 0);
+        double saldo = totalC - totalD;
+        System.out.println("=== RESUMO FINAL ===");
+        System.out.println("Total de Débitos:  R$" + totalD);
+        System.out.println("Total de Créditos: R$" + totalC);
+        System.out.println("Saldo Final:       R$" + saldo);
+        sc.close();
+    }
+}

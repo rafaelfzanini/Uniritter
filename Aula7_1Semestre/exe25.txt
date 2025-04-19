@@ -1,0 +1,40 @@
+//EX-25-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int r1, r2, contA = 0, contB = 0;
+        //cd
+        System.out.println("Digite um valor: ");
+        r1 = sc.nextInt();
+        System.out.println("Digite outro valor: ");
+        r2 = sc.nextInt();
+        //Pares menores que A.
+        for(int i = 0; i<r1; i++) {
+            if (r1%2==0){
+                contA += i;
+            }
+        }
+        //Ímpares entre A e B.
+        //r1>r2
+        if(r1<r2) {
+            for (int i = r1; i < r2; i++) {
+                if (i % 2 == 1) {
+                    contB += i;
+                }
+            }
+        }
+        //r2>r1
+        else{
+            for (int i = r2; i < r1; i++) {
+                if (i % 2 == 1) {
+                        contB += i;
+                }
+            }
+        }
+        System.out.println("A soma dos pares menores que A resulta em: " + contA);
+        System.out.println("A soma dos ímpares entre A e B resulta em: " + contB);
+        sc.close();
+    }
+}

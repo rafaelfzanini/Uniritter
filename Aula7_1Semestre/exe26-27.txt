@@ -1,0 +1,109 @@
+//EX-26/27-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var resposta
+        int r1;
+        //var contagem
+        int contA = 0, contB = 0, contC = 0, contD = 0, Contn = 0, Contbranco = 0, contT = 0;
+        //var específicas
+        double pA, pB, pC, pD;
+        //var válidas
+        int VAL = 0,VAL2 = 0, vPabs, contnb;
+        //var específicas válidas;
+        double vpA, vpB, vpC, vpD;
+        //Exibição inicial;
+        System.out.println("--- Candidato A     = 001 ---");
+        System.out.println("--- Candidato B     = 002 ---");
+        System.out.println("--- Candidato C     = 003 ---");
+        System.out.println("--- Candidato D     = 004 ---");
+        System.out.println("--- Voto Nulo       = 005 ---");
+        System.out.println("--- Voto em Branco  = 006 ---");
+        //resposta 1
+        System.out.println("Digite o código de candidato: ");
+        r1 = sc.nextInt();
+        //cd1
+        while(r1!=0){
+            //total de votos
+            contT++;
+            //voto de cada candidato
+            if(r1==1){
+                contA++;
+                VAL++;
+            }
+            else if(r1==2){
+                contB++;
+                VAL++;
+            }
+            else if(r1==3){
+                contC++;
+                VAL++;
+            }
+            else if(r1==4){
+                contD++;
+                VAL++;
+            }
+            else if(r1==5){
+                Contn++;
+                VAL2++;
+            }
+            else if(r1==6){
+                Contbranco++;
+                VAL2++;
+            }
+            else{
+                System.out.println("Código não identificado.");
+                contT--;
+            }
+            System.out.println("Digite o código de candidato (0 para sair): ");
+            r1 = sc.nextInt();
+        }
+        //total por candidato
+        System.out.println("Total de votos do candidato A: " + contA);
+        System.out.println("Total de votos do candidato B: " + contB);
+        System.out.println("Total de votos do candidato C: " + contC);
+        System.out.println("Total de votos do candidato D: " + contD);
+        //total inválido
+        System.out.println("Total de votos nulos:          " + Contn);
+        System.out.println("Total de votos em branco:      " + Contbranco);
+        //percentual total por candidato
+        if(contT >0) {
+            pA = (contA*100)/contT;
+            pB = (contB*100)/contT;
+            pC = (contC*100)/contT;
+            pD = (contD*100)/contT;
+        }
+        else{
+            pA = pB = pC = pD = 0;
+        }
+        System.out.println("Porcentagem de votos no candidato A: " + pA + "%");
+        System.out.println("Porcentagem de votos no candidato B: " + pB + "%");
+        System.out.println("Porcentagem de votos no candidato C: " + pC + "%");
+        System.out.println("Porcentagem de votos no candidato D: " + pD + "%");
+        // percentual válido por cada candidato
+        if (VAL > 0) {
+            vpA = (contA*100)/VAL;
+            vpB = (contB*100)/VAL;
+            vpC = (contC*100)/VAL;
+            vpD = (contD*100)/VAL;
+        }
+        else{
+            vpA = vpB = vpC = vpD = 0;
+        }
+        System.out.println("Porcentagem de votos (válidos) no candidato A: " + vpA + "%");
+        System.out.println("Porcentagem de votos (válidos) no candidato B: " + vpB + "%");
+        System.out.println("Porcentagem de votos (válidos) no candidato C: " + vpC + "%");
+        System.out.println("Porcentagem de votos (válidos) no candidato D: " + vpD + "%");
+        //percentual de abstenções
+        contnb = Contn + Contbranco;
+        if(contT >0) {
+            vPabs = (contnb*100)/contT;
+        }
+        else{
+            vPabs = 0;
+        }
+        System.out.println("Porcentagem de votos inválidos: " + vPabs + "%");
+        sc.close();
+    }
+}

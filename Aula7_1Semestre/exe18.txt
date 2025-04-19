@@ -1,0 +1,22 @@
+//EX-18-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int num, soma = 0, cont = 0;
+        //cd
+        do{
+            System.out.println("Digite um um número (digite 0 para parar de adicionar números): ");
+            num = sc.nextInt();
+            if(num%2 ==0 && num != 0){
+                soma += num;
+                cont += 1;
+            }
+            System.out.println("Soma:" + soma);
+        }
+        while(num != 0);
+        System.out.println("Média: " + soma/cont);
+        sc.close();
+    }
+}

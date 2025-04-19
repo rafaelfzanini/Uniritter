@@ -1,0 +1,63 @@
+//EX-30-AU07
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int id, SomaIH = 0, BaixoSM = 0, mai = 0, men = 0, aux1 = 0, total = 0;
+        String se;
+        double sal, mdsal = 0;
+        //cd
+        System.out.print("Digite sua idade (negativa para sair): ");
+        id = sc.nextInt();
+        if (id > 0) {
+            mai = id;
+            men = id;
+        }
+        sc.nextLine();
+        while (id > 0) {
+            total++;
+            System.out.print("Digite seu sexo [M/F]: ");
+            se = sc.nextLine().toUpperCase();
+            System.out.print("Digite seu salário: R$ ");
+            sal = sc.nextDouble();
+            sc.nextLine();
+            mdsal += sal;
+            switch (se) {
+                case "M":
+                    SomaIH += id;
+                    aux1++;
+                    break;
+                case "F":
+                    if (sal <= 1000) {
+                        BaixoSM++;
+                    }
+                    break;
+                default:
+                    System.out.println("Sexo inválido.");
+            }
+            if (id > mai) mai = id;
+            if (id < men) men = id;
+            System.out.print("Digite sua idade (negativa para sair): ");
+            id = sc.nextInt();
+            sc.nextLine();
+        }
+        // Resultados
+        if (total > 0) {
+            System.out.println("\n--- RESULTADOS ---");
+            System.out.println("Média salarial do grupo: R$" + mdsal / total);
+            System.out.println("Maior idade do grupo: " + mai);
+            System.out.println("Menor idade do grupo: " + men);
+
+            if (aux1 > 0) {
+                System.out.println("Média de idade dos homens: " + SomaIH / aux1);
+            } else {
+                System.out.println("Nenhum homem foi informado.");
+            }
+            System.out.println("Quantidade de mulheres com salário até R$1000: " + BaixoSM);
+        } else {
+            System.out.println("Nenhum dado foi inserido.");
+        }
+        sc.close();
+    }
+}
