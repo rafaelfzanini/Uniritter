@@ -1,0 +1,26 @@
+//Ex-03-AU11
+public class Main {
+    public static void main(String[] args) {
+        //var
+        int[][] matriz = new int[7][7];
+        //cd
+        System.out.println("MATRIZ ORIGINAL: ");
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i == j) {
+                    matriz[i][j] = 1;
+                } else {
+                    matriz [i][j]= 0;
+                }
+                System.out.println("Elemento [ " + i + "][" + j + "] = " + matriz[i][j]);
+            }
+        }
+        //exibir matriz
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}

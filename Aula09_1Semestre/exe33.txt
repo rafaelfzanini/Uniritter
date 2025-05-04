@@ -1,0 +1,39 @@
+//Ex-33-Au09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // var
+        int[] W = new int[15];
+        int menor;
+        int cont = 0;
+        //cd
+        System.out.println("Digite os 15 elementos do vetor W:");
+        for (int i = 0; i < W.length; i++) {
+            W[i] = sc.nextInt();
+        }
+        //INVERSO
+        System.out.println("-- VETOR W NA ORDEM INVERSA --");
+        for (int i = W.length - 1; i >= 0; i--) {
+            System.out.println(W[i]);
+        }
+        //MENOR
+        menor = W[0];
+        for (int i = 1; i < W.length; i++) {
+            if (W[i] < menor) {
+                menor = W[i];
+            }
+        }
+        // CONTAR QUANTIDADE
+        System.out.println("Menor elemento do vetor: " + menor);
+        System.out.println("Posições em que o menor elemento ocorre:");
+        for (int i = 0; i < W.length; i++) {
+            if (W[i] == menor) {
+                System.out.println("Posição: " + (i+1)); //começa em 1, não em 0
+                cont++;
+            }
+        }
+        System.out.println("O menor elemento ocorre " + cont + " vezes.");
+        sc.close();
+    }
+}

@@ -1,0 +1,36 @@
+//EX-27-AU09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] X = new int[500];
+        int[] A = new int[500];
+        int[] B = new int[500];
+        int contpar = 0, contimpar = 0;
+
+        System.out.println("Digite o vetor A:");
+        for (int i = 0; i < X.length; i++) {
+            X[i] = sc.nextInt();
+            if (X[i] % 2 == 0) {
+                A[contpar] = X[i];
+                contpar++;
+            }
+            else {
+                B[contimpar] = X[i];
+                contimpar++;
+            }
+        }
+        System.out.println();
+        System.out.println("-- VETOR PAR --");
+        for (int i = 0; i < contpar; i++) {
+            System.out.println(A[i] + " na posição [" + i + "]");
+        }
+        System.out.println();
+        System.out.println("-- VETOR ÍMPAR --");
+        for (int i = 0; i < contimpar; i++) {
+            System.out.println(B[i] + " na posição [" + i + "]");
+        }
+        sc.close();
+    }
+}

@@ -1,0 +1,27 @@
+//EX-28-AU09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] X = new int[50];
+        int maior;
+        
+        System.out.println("Digite o vetor X:");
+        for (int i = 0; i < X.length; i++) {
+            X[i] = sc.nextInt();
+        }
+        maior = X[0];
+        for (int i= 0; i<X.length; i++){
+            if(maior<X[i]){
+                maior = X[i];
+            }
+        }
+        System.out.println(" -- VETOR X -- ");
+        for (int i = 0; i < X.length; i++) {
+            System.out.println(X[i]);
+        }
+        System.out.println();
+        System.out.println("O maior valor do vetor é: " + maior);
+        sc.close();
+    }
+}

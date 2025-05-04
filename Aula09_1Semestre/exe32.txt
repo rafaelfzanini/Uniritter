@@ -1,0 +1,29 @@
+//EX-32-AU09
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int[] resultado = new int[5];
+        int[][] apostas = new int[50][5];
+        //cd
+        System.out.println("Digite os 5 números do resultado oficial da Loto:");
+        for (int i = 0; i < 5; i++) {
+            resultado[i] = sc.nextInt();
+        }
+        Arrays.sort(resultado);
+
+        for (int i = 0; i < 50; i++) {
+            System.out.println("Digite os 5 números da aposta " + (i + 1) + ":");
+            for (int j = 0; j < 5; j++) {
+                apostas[i][j] = sc.nextInt();
+            }
+            Arrays.sort(apostas[i]);
+            if (Arrays.equals(resultado, apostas[i])) {
+                System.out.println("Aposta " + (i + 1) + ": Ganhador!");
+            }
+        }
+        sc.close();
+    }
+}    

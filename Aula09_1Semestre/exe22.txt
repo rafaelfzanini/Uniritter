@@ -1,0 +1,44 @@
+//Ex-22-Au09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int[] A = new int[50];
+        int[] B = new int[50];
+        int[] C = new int[50];
+        int cont = 0;
+        //cd
+        System.out.println("Digite o vetor A:");
+        for (int i = 0; i < 50; i++) {
+            A[i] = sc.nextInt();
+        }
+        System.out.println("Digite o vetor B:");
+        for (int i = 0; i < 50; i++) {
+            B[i] = sc.nextInt();
+        }
+        //interseção
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                if (A[i] == B[j]) {
+                    // Verificar se o elemento já está em C
+                    int k = 0;
+                    while (k < cont && C[k] != A[i]) {
+                        k++;
+                    }
+                    // Se não encontrou o número no vetor C, adicione
+                    if (k == cont) {
+                        C[cont] = A[i];
+                        cont++;
+                    }
+                    break;
+                }
+            }
+        }
+        System.out.println("-- VETOR C --");
+        for (int i = 0; i < cont; i++) {
+            System.out.println(C[i]);
+        }
+        sc.close();
+    }
+}
