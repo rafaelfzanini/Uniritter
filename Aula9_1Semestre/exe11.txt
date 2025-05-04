@@ -1,0 +1,41 @@
+//Ex-11-AU09
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int [] vetor = new int[10];
+        int [] vetorPar = new int[10];
+        int [] vetorImpar = new int[10];
+        int pospar =0, posimpar=0;
+
+        // add valor ao vetor
+        for(int i = 0; i<vetor.length; i++){
+            System.out.println("Digite um valor: ");
+            vetor[i] = sc.nextInt();
+        }
+        //add ao vetor par ou impar
+        for(int i = 0; i<vetor.length;i++){
+            if(vetor[i] %2 == 0){
+                vetorPar[pospar] = vetor[i];
+                pospar++;
+            }
+            else {
+                vetorImpar[posimpar] = vetor[i];
+                posimpar++;
+            }
+        }
+        //saída
+        System.out.println(" -- VETOR PAR -- ");
+        for(int s = 0; s<pospar; s++){
+                System.out.println(" Na posição [" + s + "] do vetor par o valor é: " + vetorPar[s]);
+        }
+        System.out.println();
+        System.out.println(" -- VETOR ÍMPAR -- ");
+        for(int s = 0; s<posimpar; s++) {
+                System.out.println(" Na posição [" + s + "] do vetor par o valor é: " + vetorImpar[s]);
+        }
+        sc.close();
+    }
+}

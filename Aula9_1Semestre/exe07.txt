@@ -1,0 +1,20 @@
+//Ex-07-AU09
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int [] Vetor = new int[50];
+
+        //cd
+        for(int i = 0; i<50; i++){
+            System.out.println("Digite um valor: ");
+            Vetor[i] = sc.nextInt();
+            if(Vetor[i]>0){
+                System.out.println("O número " + Vetor[i] + " é positivo e está na posição [" + i + "].");
+            }
+        }
+        sc.close();
+    }
+}

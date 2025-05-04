@@ -1,0 +1,35 @@
+//Ex-15-AU09
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] gabarito = new int[13];
+        
+        System.out.println("Digite os 13 números do gabarito:");
+        for (int i = 0; i < gabarito.length; i++) {
+            gabarito[i] = sc.nextInt();
+        }
+        
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Digite o número do cartão do apostador " + (i + 1) + ":");
+            int numeroCartao = sc.nextInt();
+            int[] resposta = new int[13];
+            int acertos = 0;
+
+            System.out.println("Digite as 13 respostas do apostador:");
+            for (int j = 0; j < 13; j++) {
+                resposta[j] = sc.nextInt();
+                if (resposta[j] == gabarito[j]) {
+                    acertos++;
+                }
+            }
+
+            System.out.println("Cartão Nº " + numeroCartao + ": " + acertos + " acertos.");
+            if (acertos == 13) {
+                System.out.println(">>> GANHADOR <<<");
+            }
+        }
+        sc.close();
+    }
+}

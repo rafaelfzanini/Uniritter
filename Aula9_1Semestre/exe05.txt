@@ -1,0 +1,20 @@
+//Ex-05-AU09;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int vetor[] = new int[20];
+        int contador =0;
+        //cd
+        for(int i = 0; i <20; i++){
+            System.out.println("Digite um valor na posição " + i + ": ");
+            vetor[i] = sc.nextInt();
+            if(vetor[i]%2==0){
+                contador++;
+                System.out.println("Na posição " + i + " o valor é par.");
+            }
+        }
+        System.out.println("A quantidade de valores pares no vetor é: " + contador);
+    }
+}

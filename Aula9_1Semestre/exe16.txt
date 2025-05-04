@@ -1,0 +1,31 @@
+//Ex-16-AU09
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] vetor = new int[20];
+        int[] vetorAux = new int [20];
+
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.println("Digite um valor: ");
+            vetor[i] = sc.nextInt();
+            vetorAux[i] = vetor[i];
+        }
+        System.out.println("VETOR");
+        System.out.println();
+        for (int j = 0; j< 20; j++){
+            System.out.print(vetor[j] + "   ");
+        }
+        System.out.println();
+        for (int i=0;i<20;i++){
+            vetor[i] = vetorAux[19-i];
+        }
+        System.out.println("VETOR ATUALIZADO");
+        System.out.println();
+        for(int i = 0; i < vetor.length; i++){
+            System.out.print(vetor[i] + "   ");
+        }
+        sc.close();
+    }
+}

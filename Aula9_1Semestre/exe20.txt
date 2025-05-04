@@ -1,0 +1,44 @@
+//EX-20-AU09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int[] X = new int[10];
+        int[] Y = new int[10];
+        int [] Z = new int[10];
+        //cd
+        System.out.println("Digite o vetor X: ");
+        for (int i = 0; i < X.length; i++) {
+            X[i] = sc.nextInt();
+        }
+        System.out.println();
+        System.out.println("Digite o vetor Y: ");
+        for (int i = 0; i < Y.length; i++) {
+            Y[i] = sc.nextInt();
+        }
+        //diferença entre X e Y
+        System.out.println("-- DIFERENÇA --");
+        for (int i = 0; i < Z.length; i++) {
+            Z[i] = X[i] - Y[i];
+            System.out.print(Z[i] + " ");
+        }
+        System.out.println();
+
+        //soma entre X e Y
+        System.out.println("-- SOMA --");
+        for (int i = 0; i < Z.length; i++){
+            Z[i] = X[i] + Y[i];
+            System.out.print(Z[i] + " ");
+        }
+        System.out.println();
+
+        //produto entre X e Y
+        System.out.println("-- PRODUTO --");
+        for (int i = 0; i < Z.length; i++){
+            Z[i] = X[i] * Y[i];
+            System.out.print(Z[i] + " ");
+        }
+        sc.close();
+    }
+}

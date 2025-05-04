@@ -1,0 +1,36 @@
+//EX-26-AU09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] A = new int[500];
+        int[] B7 = new int[500];
+        int[] B3 = new int[500];
+        int cont7 = 0, cont3 = 0;
+
+        System.out.println("Digite o vetor A:");
+        for (int i = 0; i < A.length; i++) {
+            A[i] = sc.nextInt();
+            if (A[i] % 7 == 0) {
+                B7[cont7] = A[i];
+                cont7++;
+            }
+            if (A[i] % 3 == 0) {
+                B3[cont3] = A[i];
+                cont3++;
+            }
+        }
+        System.out.println();
+        System.out.println("-- VETOR B7 --");
+        for (int i = 0; i < cont7; i++) {
+            System.out.println(B7[i] + " na posição [" + i + "]");
+        }
+        System.out.println();
+        System.out.println("-- VETOR B3 --");
+        for (int i = 0; i < cont3; i++) {
+            System.out.println(B3[i] + " na posição [" + i + "]");
+        }
+        sc.close();
+    }
+}

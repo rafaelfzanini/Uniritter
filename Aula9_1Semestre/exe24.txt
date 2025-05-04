@@ -1,0 +1,37 @@
+//EX-24-AU09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int[] A = new int[3];
+        int[] pos = new int[3];
+        int[] neg = new int[3];
+        int indp = 0, indn = 0;
+
+        //cd
+        System.out.println("Digite o vetor: ");
+        for (int i = 0; i < A.length; i++) {
+            A[i] = sc.nextInt();
+            if(A[i] > 0){
+                    pos[indp] = A[i];
+                    indp++;
+                }
+            else if (A[i] < 0) {
+                    neg[indn] = A[i];
+                    indn++;
+            }
+        }
+        System.out.println();
+        System.out.println("-- VETOR POSITIVO --");
+        for (int i = 0; i < indp; i++) {
+            System.out.println(pos[i] + " na posição [" + i + "]");
+        }
+        System.out.println();
+        System.out.println("-- VETOR NEGATIVO --");
+        for (int i = 0; i < indn; i++) {
+            System.out.println(neg[i] + " na posição [" + i + "]");
+        }
+        sc.close();
+    }
+}

@@ -1,0 +1,52 @@
+//Ex-13-AU09
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //variaveis
+        int [] vetorPar = new int[10];
+        int [] vetorImpar = new int[10];
+        int contpar =0, contimpar=0;
+        int r1;
+
+
+        do {
+            System.out.println("Digite um valor: ");
+            r1 = sc.nextInt();
+            if(r1==0) {
+                break;
+            }
+            if (r1 % 2 == 0) {
+                vetorPar[contpar] = r1;
+                contpar++;
+                if (contpar == 10) {
+                    System.out.println("-- VETOR PAR CHEIO --");
+                    for (int j = 0; j<contpar; j++) {
+                        System.out.println("Na posição [" + j + "], o valor é: " + vetorPar[j]);
+                    }
+                }
+            }
+            else{
+                vetorImpar[contimpar] = r1;
+                contimpar++;
+                if (contimpar == 10) {
+                    System.out.println("-- VETOR ÍMPAR CHEIO --");
+                    for (int j = 0; j < contimpar; j++) {
+                    System.out.println("Na posição [" + j + "], o valor é: " + vetorImpar[j]);
+                    }
+                }
+            }
+        }while(r1!= 0 && contpar != 10 && contimpar != 10);
+        System.out.println("--PARES--");
+        for(int i = 0; i < contpar; i++){
+            System.out.println("Na posição [" + i + "], o valor é: " + vetorPar[i]);
+        }
+        System.out.println();
+        System.out.println("--ÍMPARES--");
+        for(int i = 0; i < contimpar; i++){
+            System.out.println("Na posição [" + i + "], o valor é: " + vetorImpar[i]);
+        }
+        sc.close();
+    }
+}

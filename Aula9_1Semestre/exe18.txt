@@ -1,0 +1,39 @@
+//EX-18-AU09
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        String [] G = new String[20];
+        String [] R = new String[20];
+        int acerto;
+        //cd
+        System.out.println("Digite o gabarito: " );
+        for(int i = 0;i <G.length; i++){
+            G[i] = sc.next();
+        }
+        System.out.println("-- GABARITO --");
+        for(int i = 0;i <G.length; i++){
+            System.out.print(G[i] + "  ");
+        }
+        System.out.println();
+        for(int i = 0; i < 50; i++){
+            System.out.println("Aluno [" + i + "]");
+            acerto = 0;
+            System.out.println("Digite as respostas do aluno: ");
+            for(int j = 0; j<R.length; j++) {
+                R[j] = sc.next();
+                if (R[j].equalsIgnoreCase(G[j])){
+                    acerto++;
+                }
+            }
+            if(acerto>=12){
+                System.out.println("Aprovado com " + acerto + " acertos.");
+            }
+            else{
+                System.out.println("Reprovado com " + acerto + " acertos.");
+            }
+        }
+        sc.close();
+    }
+}

@@ -1,0 +1,55 @@
+//Ex-12-AU09
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //variaveis
+        int [] vetor = new int[30];
+        int [] vetorPar = new int[5];
+        int [] vetorImpar = new int[5];
+        int contpar =0, contimpar=0;
+
+        //da valor ao vetor
+        for(int i = 0; i<vetor.length; i++){
+            System.out.println("Digite um valor: ");
+            vetor[i] = sc.nextInt();
+
+            //PARES E ÍMPARES
+            if(vetor[i] % 2 ==0) { //se o valor for par
+                vetorPar[contpar] = vetor[i]; //vator par na posição par recebe esse valor
+                contpar++; //add 1 na contagem par
+                if(contpar==5) { //quando contagem par for 5 o vetor fica cheio
+                    System.out.println("-- VETOR PAR CHEIO --");
+                    for(int j = 0; j <contpar; j++) { // printa o vetor par cheio
+                        System.out.println("Na posição [" + j + "], o valor é: " + vetorPar[j]);
+                    }
+                    contpar = 0; //reseta a contagem de respostas pares
+                }
+            }
+            else{ //se o valor for impar
+                vetorImpar[contimpar] = vetor[i]; //vetor impar na posição de impar recebe esse valor
+                contimpar++; //add 1 na contagem impar
+                if(contimpar==5) { // quando a contagem impar for 5 o vetor fica cheio
+                    System.out.println("-- VETOR ÍMPAR CHEIO --");
+                    for(int j = 0; j <contimpar; j++){ //printa o vetor cheio
+                        System.out.println("Na posição [" + j + "], o valor é: " + vetorImpar[j]);
+                    }
+                    contimpar = 0; //reseta a contagem
+                }
+            }
+        }
+
+        //EXIBIÇÃO FINAL
+        System.out.println(" ----- VETORES FINAIS ----- ");
+        System.out.println("----- RESTO VETOR PAR -----");
+        for(int j = 0; j <contpar; j++) { //mostra o que sobrou do vetorPar
+            System.out.println("Na posição [" + j + "], o valor é: " + vetorPar[j]);
+        }
+        System.out.println("----- RESTO VETOR ÍMPAR -----");
+        for(int j = 0; j <contimpar; j++){ //mostra o que sobrou do vetorImpar
+            System.out.println("Na posição [" + j + "], o valor é: " + vetorImpar[j]);
+        }
+        sc.close();
+    }
+}

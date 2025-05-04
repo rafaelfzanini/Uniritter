@@ -1,0 +1,32 @@
+//Ex-09-AU09
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //var
+        int [] vetorM = new int[10];
+        int [] vetorAux = new int[10]; //auxilio
+
+        // alterando vetor
+        for(int i = 0; i<vetorM.length; i++){
+            System.out.println("Digite um valor: ");
+            vetorM[i] = sc.nextInt();
+            vetorAux[i] = vetorM[i];
+        }
+        //troca valores
+        for(int k = 0; k <vetorM.length ; k++){
+            if(k <5){
+                vetorM[k] = vetorAux[k+5];
+            }
+            else{
+                vetorM[k] = vetorAux[k-5];
+            }
+        }
+        // exibição
+        for(int j = 0; j < vetorM.length; j++){
+            System.out.println("No Y, na posição [" + j + "] o valor é: " + vetorM[j]);
+        }
+        sc.close();
+    }
+}
